@@ -1,0 +1,142 @@
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+.wrap{padding:20px 16px 32px;font-family:var(--font-sans)}
+.hdr{text-align:center;margin-bottom:20px}
+.hdr h1{font-size:15px;font-weight:500;color:var(--color-text-primary);margin-bottom:4px}
+.hdr p{font-size:11px;color:var(--color-text-tertiary)}
+.user-row{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:6px}
+.user-pill{background:var(--color-background-secondary);border:1px solid var(--color-border-primary);border-radius:20px;padding:8px 20px;font-size:13px;font-weight:500;color:var(--color-text-primary)}
+.arrow-h{font-size:16px;color:var(--color-text-tertiary)}
+.advisor-pill{background:#EEEDFE;border:1px solid #7F77DD;border-radius:20px;padding:8px 20px;font-size:13px;font-weight:500;color:#3C3489}
+.dn{text-align:center;color:var(--color-text-tertiary);font-size:18px;line-height:1.3;margin:2px 0}
+.dns{text-align:center;color:var(--color-text-tertiary);font-size:14px;line-height:1.3;margin:2px 0}
+.section-lbl{font-size:10px;font-weight:500;color:var(--color-text-tertiary);letter-spacing:.6px;text-align:center;margin-bottom:6px}
+.agents-row{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:6px}
+.nd{border-radius:8px;padding:9px 12px}
+.nd .t{font-size:11px;font-weight:500;margin-bottom:1px}
+.nd .s{font-size:10px;opacity:.8}
+.tl{background:#E1F5EE;border:.5px solid #1D9E75;color:#085041}
+.bl{background:#E6F1FB;border:.5px solid #185FA5;color:#0C447C}
+.am{background:#FAEEDA;border:.5px solid #BA7517;color:#633806}
+.pu{background:#EEEDFE;border:.5px solid #534AB7;color:#3C3489}
+.co{background:#FAECE7;border:.5px solid #993C1D;color:#712B13}
+.pk{background:#FBEAF0;border:.5px solid #993556;color:#72243E}
+.viz-box{background:#FAEEDA;border:1px solid #EF9F27;border-radius:10px;padding:10px 14px;text-align:center;margin-bottom:6px}
+.viz-box .t{font-size:13px;font-weight:500;color:#633806;margin-bottom:2px}
+.viz-box .s{font-size:10px;color:#854F0B}
+.branches{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:6px}
+.branch-col{display:flex;flex-direction:column;align-items:center}
+.branch-hdr{border-radius:8px;padding:8px 10px;font-size:11px;font-weight:500;text-align:center;width:100%;margin-bottom:4px}
+.bh-teal{background:#E1F5EE;border:.5px solid #1D9E75;color:#085041}
+.bh-coral{background:#FAECE7;border:.5px solid #993C1D;color:#712B13}
+.bh-blue{background:#E6F1FB;border:.5px solid #185FA5;color:#0C447C}
+.branch-nd{border-radius:7px;padding:8px 10px;width:100%;font-size:11px}
+.branch-nd .t{font-weight:500;margin-bottom:1px}
+.branch-nd .s{font-size:10px;opacity:.8}
+.langgraph{background:#E24B4A;border-radius:10px;padding:12px 20px;text-align:center}
+.langgraph .t{font-size:14px;font-weight:500;color:#fff;margin-bottom:2px}
+.langgraph .s{font-size:10px;color:#fecaca}
+.leg{display:flex;flex-wrap:wrap;gap:7px;padding:10px 14px;background:var(--color-background-secondary);border:.5px solid var(--color-border-tertiary);border-radius:8px;margin-top:16px}
+.li{display:flex;align-items:center;gap:4px;font-size:10px;color:var(--color-text-secondary)}
+.ld{width:10px;height:10px;border-radius:3px;flex-shrink:0}
+</style>
+
+<div class="wrap">
+
+<div class="hdr">
+  <h1>LLM sales advisor — agentic architecture</h1>
+  <p>CARS24 · multi-agent car selling &amp; buying assistant · LangGraph orchestrated</p>
+</div>
+
+<div class="user-row">
+  <div class="user-pill">User seeks advice to sell car</div>
+  <div class="arrow-h">→</div>
+  <div class="advisor-pill">LLM sales advisor</div>
+</div>
+<div class="dn">↓</div>
+
+<div class="section-lbl">DATA &amp; PRICING AGENTS</div>
+<div class="agents-row">
+  <div class="nd tl">
+    <div class="t">Vehicle data agent</div>
+    <div class="s">Fetches car specs, condition, history</div>
+  </div>
+  <div class="nd am">
+    <div class="t">Service history agent</div>
+    <div class="s">Retrieves service &amp; maintenance records</div>
+  </div>
+  <div class="nd pu">
+    <div class="t">ML pricing model</div>
+    <div class="s">Predicts fair market value</div>
+  </div>
+  <div class="nd pk">
+    <div class="t">Market price analysis</div>
+    <div class="s">Price scraping · CarDekho, OLX, Spinny &amp; more</div>
+  </div>
+</div>
+
+<div class="dn">↓</div>
+
+<div class="viz-box">
+  <div class="t">Visualization &amp; depreciation chart</div>
+  <div class="s">Price trend · depreciation curve · market comparison · consolidated insights</div>
+</div>
+
+<div class="dn">↓</div>
+<div class="section-lbl">USER ACTION BRANCHES</div>
+
+<div class="branches">
+  <div class="branch-col">
+    <div class="branch-hdr bh-teal">Book inspection</div>
+    <div style="font-size:10px;color:var(--color-text-tertiary);margin-bottom:4px;text-align:center">Home or nearby location</div>
+    <div class="branch-nd tl">
+      <div class="t">Schedule inspection</div>
+      <div class="s">Save booking to Snowflake</div>
+    </div>
+  </div>
+  <div class="branch-col">
+    <div class="branch-hdr bh-coral">Upgrade car</div>
+    <div style="font-size:10px;color:var(--color-text-tertiary);margin-bottom:4px;text-align:center">Car recommendations &amp; EMI options</div>
+    <div class="branch-nd co">
+      <div class="t">EMI calculation &amp; test drive</div>
+      <div class="s">Compute EMI · book test drive slot</div>
+    </div>
+  </div>
+  <div class="branch-col">
+    <div class="branch-hdr bh-blue">Compare cars</div>
+    <div style="font-size:10px;color:var(--color-text-tertiary);margin-bottom:4px;text-align:center">Detailed side-by-side comparison</div>
+    <div class="branch-nd bl">
+      <div class="t">Show car comparison</div>
+      <div class="s">Specs · price · feature diff</div>
+    </div>
+  </div>
+</div>
+
+<div style="display:flex;justify-content:space-around;margin:4px 0">
+  <div class="dns">↓</div>
+  <div class="dns">↓</div>
+  <div class="dns">↓</div>
+</div>
+
+<div style="display:flex;align-items:center;margin-bottom:6px">
+  <div style="flex:1;height:1.5px;background:var(--color-border-secondary);border-radius:1px"></div>
+  <div style="width:16px;text-align:center;font-size:14px;color:var(--color-text-tertiary)">↓</div>
+  <div style="flex:1;height:1.5px;background:var(--color-border-secondary);border-radius:1px"></div>
+</div>
+
+<div class="langgraph">
+  <div class="t">LangGraph orchestration</div>
+  <div class="s">State management · agent routing · session threads · HITL checkpoints · memory &amp; caching</div>
+</div>
+
+<div class="leg">
+  <div class="li"><div class="ld" style="background:#1D9E75"></div>Vehicle &amp; inspection</div>
+  <div class="li"><div class="ld" style="background:#BA7517"></div>Service history</div>
+  <div class="li"><div class="ld" style="background:#7F77DD"></div>ML pricing</div>
+  <div class="li"><div class="ld" style="background:#993556"></div>Web scraping · market price</div>
+  <div class="li"><div class="ld" style="background:#993C1D"></div>Upgrade &amp; EMI</div>
+  <div class="li"><div class="ld" style="background:#E24B4A"></div>LangGraph orchestration</div>
+</div>
+
+</div>
